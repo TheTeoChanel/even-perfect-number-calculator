@@ -2,13 +2,13 @@
  Hello, this is even perfect number calculator that I made in python!
 
 ## Table of contents
-- [Table of contents](#-table-of-contents)
-- [How to run](#-how-to-run)
-- [How does it work](#-how-does-it-work)
-- [Declaring variables](#-declaring-variables)
-- [Actually calculating it lol](#-actually-calculating-it-lol)
-- [Calculating divisors](#-calculating-divisors)
-- [Final code](#-final-code)
+- [Table of contents](#table-of-contents)
+- [How to run](#how-to-run)
+- [How does it work](#how-does-it-work)
+- [Declaring variables](#step1.declaring-variables)
+- [Actually calculating it lol](#step2.actually-calculating-it-lol)
+- [Calculating divisors](#step3.calculating-divisors)
+- [Final code](#final-code)
 
 ## How to run
 I guess you can run basic python files without issues.
