@@ -14,7 +14,7 @@
 I guess you can run basic python files without issues.
 Libraries : `none`
 python 3.13
-# How does it work
+## How does it work
 So, this calculator uses [mersenne primes](https://en.wikipedia.org/wiki/Mersenne_prime) to calculate perfect numbers. If `p` is prime and `(2^p)-1` is also prime, then `2^(p-1) * ((2^p)-1)` is a perfect number!
 
 Lets review the code :
