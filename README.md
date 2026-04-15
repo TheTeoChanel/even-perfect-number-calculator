@@ -1,7 +1,7 @@
 # Perfect number calculator
  Hello, this is even perfect number calculator that I made in python!
 
-# Table of contents
+## Table of contents
 - [Table of contents](#-table-of-contents)
 - [How to run](#-how-to-run)
 - [How does it work](#-how-does-it-work)
@@ -10,7 +10,7 @@
 - [Calculating divisors](#-calculating-divisors)
 - [Final code](#-final-code)
 
-# How to run
+## How to run
 I guess you can run basic python files without issues.
 Libraries : `none`
 python 3.13
@@ -19,7 +19,7 @@ So, this calculator uses [mersenne primes](https://en.wikipedia.org/wiki/Mersenn
 
 Lets review the code :
 
-### Step 1. Declaring variables
+## Step 1. Declaring variables
 ```python
 p = 2
 number = 1
@@ -32,7 +32,7 @@ prime = True
 `divisors` is optionally calculated divisors list (see soon).
 `prime` is boolean to break out of prime number checking while loops.
 
-### Step 2. Actually calculating it lol
+## Step 2. Actually calculating it lol
 I declare a function that calculates next `p` as a prime number.
 ```python
 def next_p_prime():
@@ -59,7 +59,7 @@ Finally after this I set `number` to `2^(p-1) * ((2^p)-1)`!
 number = 2 ** (p - 1) * ((2 ** p) - 1)
 ```
 
-### Step 3. Calculating divisors
+## Step 3. Calculating divisors
 This is optional because this slows down calculation **massively**.
 ```python
 if input('Calculate divisors? It can slow down calculation (y/n)').lower() == 'y':
@@ -84,7 +84,7 @@ The list `divisors` is used here. I check every number until `ceil(sqrt(number))
 
 After all of this I clear `divisors` list and reset `prime` to `False`.
 
-# Final code
+## Final code
 ```python
 print('Welcome to my (even) perfect-number calculator!')
 input('Enter anything to start...')
