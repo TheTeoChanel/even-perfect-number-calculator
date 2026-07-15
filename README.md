@@ -1,5 +1,5 @@
 # Perfect number calculator
- Hello, this is even perfect number calculator that I made in python!
+ Hello, this is a perfect number calculator that I made in python!
 
 ## Table of contents
 - [Table of contents](#table-of-contents)
@@ -15,7 +15,7 @@ I guess you can run basic python files without issues.
 Libraries : `none`
 python 3.13
 ## How does it work
-So, this calculator uses [mersenne primes](https://en.wikipedia.org/wiki/Mersenne_prime) to calculate perfect numbers. If `p` is prime and `(2^p)-1` is also prime, then `2^(p-1) * ((2^p)-1)` is a perfect number!
+So, this calculator uses [mersenne primes](https://en.wikipedia.org/wiki/Mersenne_prime) to calculate the perfect numbers. If the number `p` is prime and `(2^p)-1` is also prime, then `2^(p-1) * ((2^p)-1)` is a perfect number!
 
 Lets review the code :
 
@@ -28,12 +28,12 @@ prime = True
 ```
 
 `p` will be our [mersenne prime](https://en.wikipedia.org/wiki/Mersenne_prime).
-`number` is calculated perfect number.
+`number` the result of calculation (the perfect number).
 `divisors` is optionally calculated divisors list (see soon).
 `prime` is boolean to break out of prime number checking while loops.
 
 ## Step 2. Actually calculating it lol
-I declare a function that calculates next `p` as a prime number.
+I declared a function that calculates next `p` as a prime number.
 ```python
 def next_p_prime():
     global p
@@ -45,7 +45,7 @@ def next_p_prime():
             if p % i == 0:
                 prime = False
 ```
-Then i check if `(2^p)-1` is a prime. If not then I run function again until `(2^p)-1` becomes prime. Here is the code:
+Then I check if `(2^p)-1` is a prime. If its not a prime, I run function again until `(2^p)-1` becomes a prime number. Here's the code:
 ```python
 while not prime:
 	next_p_prime() # <-- Here is this function used
@@ -53,7 +53,7 @@ while not prime:
 		if (2 ** p - 1) % i == 0:
 			prime = False
 ```
-Finally after this I set `number` to `2^(p-1) * ((2^p)-1)`!
+After this I set `number` to `2^(p-1) * ((2^p)-1)`.
 
 ```python
 number = 2 ** (p - 1) * ((2 ** p) - 1)
@@ -67,8 +67,8 @@ if input('Calculate divisors? It can slow down calculation (y/n)').lower() == 'y
 else:
     calculateDivisors = False
 ```
-This code asks user to enable or disable this.
-`calculateDivisors` is used to decide calculating divisors or not in this code below:
+This code asks user to enable or disable this feature.
+`calculateDivisors` is a boolean that is used to decide whether calculating divisors or not in this code below:
 ```python
     if calculateDivisors:
         for i in range(1, int(number ** 0.5) + 1):
